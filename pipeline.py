@@ -10,7 +10,7 @@ def dbConnection(database, query):
 		connection = mysql.connector.connect(
 			host='localhost',
 			user='root',
-			passwd='Ms@240995',
+			passwd='XXXXXXXXXXXXX',
 			database=database,
 			autocommit=True,
 		)
@@ -236,18 +236,3 @@ def pdf(database, table, df=None, query=None, exec_type='read', index=False, if_
 		      .format(time.strftime("%I:%M:%S %p", time.localtime()), e))
 		exit()
 
-# def data_fix():
-# 	call(database="ETL_Config", procedure="SP_UpdateUserAgent")
-# 	call(database="ETL_Config", procedure="SP_UpdateProxy")
-# 	print("[{}] Data Fix accomplished successfully.".format(time.strftime("%I:%M:%S %p", time.localtime())))
-# 	time.sleep(2)
-
-
-# if __name__ == "__main__":
-# 	select(database="ETL_Config", table="NavigationUrl", column="NextPageUrl",
-# 	       condition={"UrlID": 2, "UrlCategory": "User Agent"}, operator="AND"
-# 	       )
-#
-# 	call(database="ETL_Config", procedure="SP_NavigationUrl_Sync",
-# 	     parameter={"id": 1, "category": "Proxy"}
-# 	     )
